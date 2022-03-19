@@ -3,7 +3,7 @@ import { InsertComponent } from '../components/insert/insert.component';
 import { ShowAllComponent } from '../components/show-all/show-all.component';
 import { PagesService } from '../services/pages.service';
 import { ServiceService } from '../services/service.service';
-
+declare var $:any
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -15,9 +15,11 @@ export class SidebarComponent implements OnInit {
    }
 
   ngOnInit(): void {
+   
   }
   ngAfterViewInit(){
     document.getElementById("side_btn_0")?.classList.add(this._service.allPages[0].class)
+    
   }
   isOpen:any=false
   newWidth:any="col-md-11"

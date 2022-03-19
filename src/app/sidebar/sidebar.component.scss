@@ -28,7 +28,7 @@
 }
 
 .logo_img {
-    margin: 3px -7% 0px;
+    margin: 3px 3% 0px;
     width: 175px;
 }
 
@@ -71,8 +71,8 @@ ul {
     li {
         font-family: cursive;
         .camera-btn {
-            border: 3px solid #aac2e9;
-            background-color: rgb(170, 194, 233);
+            // border: 3px solid #aac2e9;
+            // background-color: rgb(170, 194, 233);
             padding: 0px 5px;
             border-radius: 6px;
         }
@@ -89,7 +89,7 @@ ul {
 
 @media(max-width: 767px) {
     .toggle_container {
-        width: 6%;
+        width: 9%;
         min-height: 852px;
     }
     .side_container,
@@ -98,10 +98,14 @@ ul {
         z-index: 88;
     }
     .content_container {
-        margin: 0px 4%;
+        margin: 0px 7%;
+        min-height: 852px;
     }
     .fa-angle-double-right {
-        font-size: 26px;
-        margin: 14px 22% !important;
+        font-size: 37px;
+        margin: 14px 27% !important;
+    }
+    .logo_img {
+        margin: 3px 23% 0px;
     }
 }

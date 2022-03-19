@@ -1,10 +1,11 @@
 <div *ngIf="isCameraExist; else noCameraExist" class="w-100 camera_container">
     <div style="text-align:center">
-        <div class="btn-group">
+        <div>
             <button class="btn btn-light-update" (click)="takeSnapshot()">Take Picture</button>
             <button class="btn btn-light-update" (click)="changeWebCame(true)">Toggle Camera</button>
             <button class="btn btn-light-update" (click)="onOffWebCame()">Switch camera</button>
-        </div> <br />
+        </div>
+        <br />
         <webcam [height]="500" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [switchCamera]="nextWebcamObservable"></webcam>
     </div>
 

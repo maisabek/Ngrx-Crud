@@ -23,5 +23,6 @@ selectedItem(id:any){
   item.classList.remove(this.allPages[id].class);
  })
  document.getElementById("side_btn_"+id)?.classList.add(this.allPages[id].class)
+ document.getElementById("side_btn_"+id)?.closest(".side_container")?.classList.add("close")
 }
 }
