@@ -22,20 +22,20 @@ export enum ActionTypes {
   DELETE_SUCCESS = '[Book] Delete Success',
 
   // get by Id
-  LOAD_BOOK_REQUEST = '[Book] Load Book Request',
-  LOAD_BOOK_FAILURE = '[Book] Load Book Failure',
-  LOAD_BOOK_SUCCESS = '[Book] Load Book Success'
+  LOAD_User_REQUEST = '[User] Load User Request',
+  LOAD_User_FAILURE = '[User] Load User Failure',
+  LOAD_User_SUCCESS = '[User] Load User Success'
 
 
 
 }
 
 
-export interface BookState {
-  selectedBook: Book,
-  books: Book[],
-  isLoading?: boolean;
-  error?: any;
-}
+// export interface BookState {
+//   selectedBook: Book,
+//   books: Book[],
+//   isLoading?: boolean;
+//   error?: any;
+// }
 
 export const initialState: any ={};

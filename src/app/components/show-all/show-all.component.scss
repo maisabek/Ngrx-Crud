@@ -1,0 +1,70 @@
+                                                        @import '../../shared/varaiables';
+                                                        .show_all_btn {
+                                                            background-color: rgb(170, 194, 233);
+                                                            color: $dark_blue;
+                                                            padding: 5px 7px;
+                                                            border-radius: 50%;
+                                                            width: 15%;
+                                                        }
+                                                        
+                                                        .text-dark-blue {
+                                                            color: $dark_blue;
+                                                            font-size: 28px;
+                                                        }
+                                                        
+                                                        .search-input {
+                                                            border-radius: 20px;
+                                                        }
+                                                        
+                                                        .btn-light-danger {
+                                                            background-color: rgb(245, 187, 187);
+                                                            color: $dark_red;
+                                                        }
+                                                        
+                                                        .btn-light-update {
+                                                            background-color: rgb(170, 194, 233);
+                                                            color: $dark_blue;
+                                                        }
+                                                        
+                                                        th {
+                                                            color: $dark_blue;
+                                                        }
+                                                        
+                                                        .fa-spinner {
+                                                            margin: 0px 45%;
+                                                        }
+                                                        
+                                                        .table-responsive {
+                                                            overflow: hidden;
+                                                        }
+                                                        
+                                                        .btn-sort {
+                                                            background: $dark_blue;
+                                                            border-radius: 10px;
+                                                        }
+                                                        
+                                                        .sortBy {
+                                                            background: transparent;
+                                                            border: none;
+                                                            outline: none;
+                                                            color: white;
+                                                            option {
+                                                                color: $dark_blue;
+                                                            }
+                                                        }
+                                                        
+                                                        @media(max-width: 767px) {
+                                                            .show_all_btn {
+                                                                width: 55%;
+                                                            }
+                                                            .birthday,
+                                                            .phone {
+                                                                display: none;
+                                                            }
+                                                            .delete_btn {
+                                                                margin: 0px !important;
+                                                            }
+                                                            .search_container {
+                                                                width: 75% !important;
+                                                            }
+                                                        }

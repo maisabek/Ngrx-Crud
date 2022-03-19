@@ -1,9 +1,50 @@
-<form [formGroup]="buildForm">
-  <input type="text" placeholder="Enter name" formControlName="name">
-  <input type="email" placeholder="Enter email" formControlName="email">
-  <input type="password" placeholder="Enter password" formControlName="password">
-  <button (click)="update()">update</button>
-</form>
 
+<div class="container mt-5">
+  <div class="row mt-5">
+  <div class="col-md-12 mt-5 card">
+  <form [formGroup]="buildForm">
+  <div class="row">
+    <div class="col-md-12 p-3">
+      <h5 class="text-center mb-3 text-dark-blue">Update User</h5>
+    </div>
+    <div class="col-md-6 mt-3 form-group">
+    <input type="text" placeholder="Enter Name" class="form-control" formControlName="name">
+    </div>
+    <div class="col-md-6 mt-3 form-group">
+    <input type="number" placeholder="Enter phone" class="form-control" formControlName="phone">
+    </div>
+    <div class="col-md-6 mt-3 form-group">
+    <input type="email" placeholder="Enter email" class="form-control" formControlName="email">
+    </div>
+    <div class="col-md-6 mt-3 form-group">
+    <input type="password" placeholder="Enter password" class="form-control" formControlName="password">
+    </div>
+    <div class="col-md-6 mt-3 form-group">
+    <input type="text" placeholder="Enter country" class="form-control" formControlName="country">
+    </div>
+    <div class="col-md-6 mt-3 form-group">
+    <input type="number" placeholder="Enter national_number" class="form-control" formControlName="national_number">
+    </div>
+    <div class="col-md-6 mt-3 form-group">
+    <input type="number" placeholder="Enter birthday" class="form-control" formControlName="birthday">
+    </div>
+    <div class="col-md-3 mt-3 form-group">
+    <input type="checkbox" class="mx-1" placeholder="Enter canEdit" formControlName="canEdit">canEdit
+    </div>
+    <div class="col-md-3 mt-3 form-group">
+    <input type="checkbox" placeholder="Enter canView" class="mx-1" formControlName="canView">canView
+    </div>
+    <div class="col-md-12 mt-3 form-group">
+    <button class="btn Update_btn mb-3 float-end" (click)="update()">Update</button>
+    </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  
+<div class="alert w-100 mt-5" *ngIf="isLoading == true">
+  User Updated Successfully Go To User List !
+</div>
+  </div>
 
 

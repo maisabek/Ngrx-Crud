@@ -14,7 +14,8 @@ export class UpdateEffect{
   updateRequestEffect$ = createEffect(() => this.actions.pipe(
     ofType(updateActions.updateRequestAction),
     switchMap(action => {
-      return this._ServiceService.saveData(action.item).pipe(
+      console.log("action = ",action)
+      return this._ServiceService.update(action.item,action.id).pipe(
           map((item: any) => {
               return updateActions.updateSuccessAction({ item })
           }),

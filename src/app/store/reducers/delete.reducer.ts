@@ -12,7 +12,8 @@ export const deleteReducer = createReducer(
   on(deleteActionTypes.deleteSuccessAction, (state, { id }) => ({
     ...state,
     isLoading: false,
-    books: state.books.filter((x:any) => x.id != id)
+    books: state.books
+    // .filter((x:any) => x.id != id)
   })),
 
   on(deleteActionTypes.deleteFailureAction, (state, { error }) => ({

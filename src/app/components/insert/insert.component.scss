@@ -1,0 +1,21 @@
+@import '../../shared/varaiables';
+.Insert_btn{
+  background-color: $dark_blue;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 10%;
+}
+.text-dark-blue{
+  color: $dark_blue;
+}
+.alert{
+  background-color: $dark_blue;
+  color: white;
+}
+
+@media(max-width:767px){
+  .Insert_btn{
+    width: 32%;
+  }
+}

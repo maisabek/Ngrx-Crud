@@ -2,17 +2,17 @@ import { createAction, props } from "@ngrx/store";
 import { Book } from "src/app/models/Book";
 import { ActionTypes } from "../store";
 
-export const loadBookRequestAction = createAction(
-  ActionTypes.LOAD_BOOK_REQUEST,
+export const loadUserRequestAction = createAction(
+  ActionTypes.LOAD_User_REQUEST,
   props<{ id: number }>()
 );
 
-export const loadBookSuccessAction = createAction(
-  ActionTypes.LOAD_BOOK_SUCCESS,
-  props<{ book: any }>()
+export const loadUserSuccessAction = createAction(
+  ActionTypes.LOAD_User_SUCCESS,
+  props<{ user: any }>()
 );
 
-export const loadBookFailureAction = createAction(
-  ActionTypes.LOAD_BOOK_FAILURE,
+export const loadUserFailureAction = createAction(
+  ActionTypes.LOAD_User_FAILURE,
   props<{ error: string }>()
 );

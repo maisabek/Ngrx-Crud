@@ -1,2 +1,62 @@
-<p>show-all works!</p>
-<button (click)="load()">show</button>
+<div class="w-100">
+    <div class="d-flex">
+        <div class="mx-2">
+            <h5 class=" text-left text-dark-blue mb-5 mt-5 ">Users Lists</h5>
+        </div>
+        <div>
+            <button (click)="_service.selectedItem(1)" data-toggle="tooltip" title="Add New User" routerLink="/add" class="btn w-100 show_all_btn mt-5 mb-2 ">
+              <i class="fa fa-plus mx-1" aria-hidden="true "></i>
+          </button>
+        </div>
+    </div>
+    <div class="d-flex w-100 mb-5 ">
+        <div class="w-25 search_container">
+            <input type="search" id="search_element" autocomplete="off" placeholder="search title ... " (keyup)="search($event) " class="form-control search-input ">
+        </div>
+        <div>
+            <button class="btn btn-sort mx-3 d-none" id="sort_btn">
+          <select class="sortBy"  (change)="sort($event)">
+            <option value="sort by " selected disabled>sort by</option>
+            <option value="Title[A-Z]">Title [A-Z]</option>
+            <option value="Title[Z-A]">Title [Z-A]</option>
+          </select>
+        </button>
+        </div>
+    </div>
+    <div class="">
+        <div class=" ">
+            <table class="table table-hover table-sm" [style.width]="_service.tableWidth">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th class="phone ">Phone</th>
+                        <th>Email</th>
+                        <th>country</th>
+                        <th class="birthday ">birthday</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of filterdUser">
+                        <td>{{data.name}}</td>
+                        <td class="phone ">{{data.phone}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.country}}</td>
+                        <td class="birthday ">{{data.birthday | date}}</td>
+                        <td>
+                            <button class="btn btn-light-update btn-sm " (click)="getById(data.id) " data-toggle="tooltip " title="Update " routerLink="/update/{{data.id}} ">
+              <i class="fa fa-pencil " aria-hidden="true "></i>
+              </button>
+                            <button class="btn btn-light-danger delete_btn btn-sm mx-2 " data-toggle="tooltip " title="Delete " (click)="delete(data.id); ">
+               <i class="fa fa-trash " aria-hidden="true "></i>
+             </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="w-100 ">
+                <i class="fa fa-spinner mt-1 text-dark-blue fa-spin fa-2x " *ngIf="isLoading " aria-hidden="true "></i>
+            </div>
+        </div>
+    </div>
+</div>

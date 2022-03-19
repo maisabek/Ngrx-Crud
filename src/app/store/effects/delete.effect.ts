@@ -9,13 +9,15 @@ import * as deleteActions from '../actions/delete.action';
 @Injectable({providedIn:'root'})
 export class DeleteEffect {
 
-  constructor(private http:HttpClient,private actions:Actions,private _ServiceService:ServiceService){}
+  constructor(private actions:Actions,private _ServiceService:ServiceService){}
 
   deleteRequestEffect$ = createEffect(() => this.actions.pipe(
     ofType(deleteActions.deleteRequestAction),
     switchMap(action => {
+      console.log("action ",action)
       return this._ServiceService.deleteItem(action.id).pipe(
           map((item: any) => {
+            console.log("item = ",item)
               return deleteActions.deleteSuccessAction({ id: action.id })
           }),
           catchError(error => {

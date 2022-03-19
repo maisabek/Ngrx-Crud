@@ -1,0 +1,51 @@
+<section class="sidebar">
+    <div class="d-flex w-100">
+        <div class="side_container col-9 col-md-2" *ngIf="isOpen">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <img src="assets/img/Logo_07.png" class="logo_img h-100">
+                    </div>
+                    <ng-container *ngFor="let item of _service.allPages.slice(0,2)">
+                        <div class="col-md-12">
+                            <button class="mt-4 btn text-white text-center side-header" id="side_btn_{{item.id}}" (click)="_service.selectedItem(item.id)" routerLink="{{item.url}}">
+                {{item.title}}
+              </button>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="toggle_container">
+            <i class="fa fa-angle-double-right mt-2 mb-3 mx-3 text-white" (click)="ToggleSide()" aria-hidden="true"></i>
+        </div>
+        <div class="col-11 content_container" [ngClass]="newWidth">
+            <div class="row">
+                <div class="col-12 nav_container" [ngClass]="navWidth">
+                    <div class="float-end">
+                        <a routerLink="/list">
+                            <img src="assets/img/Logo_07.png " class="logo_img_0 h-100 ">
+                        </a>
+                    </div>
+                    <ul class="d-flex list-unstyled mt-2 mx-4 float-start ">
+
+                        <li>
+                            <a class="camera-btn " routerLink="/camera" routerLinkActive="LinkActive ">
+                                <i class="fa fa-camera " aria-hidden="true "></i> Camera
+                            </a>
+                        </li>
+                        <!-- <li class="mx-4 ">
+                            <a routerLink="/add " routerLinkActive="LinkActive ">Add user</a>
+
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="container ">
+
+                <router-outlet></router-outlet>
+                <!-- <ng-container *ngComponentOutlet="_service.selectedPage "></ng-container> -->
+            </div>
+        </div>
+    </div>
+</section>

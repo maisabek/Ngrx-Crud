@@ -18,6 +18,7 @@ constructor(private http:HttpClient,private action:Actions,
     switchMap(action => {
       return this._ServiceService.getData().pipe(
         map((items: any) => {
+          //  console.log("items = ",items);
             return showActions.loadSuccessAction({ items })
         }),
         catchError(error => {

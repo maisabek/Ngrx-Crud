@@ -1,10 +1,9 @@
 import { createAction, props } from "@ngrx/store";
-import { Book } from "src/app/models/Book";
 import { ActionTypes } from "../store";
 
 export const updateRequestAction = createAction(
   ActionTypes.UPDATE_REQUEST,
-  props<{ item: any }>()
+  props<{ item: any , id:any}>()
 );
 
 export const updateFailureAction = createAction(

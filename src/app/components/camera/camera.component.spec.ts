@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetByIdComponent } from './get-by-id.component';
+import { CameraComponent } from './camera.component';
 
-describe('GetByIdComponent', () => {
-  let component: GetByIdComponent;
-  let fixture: ComponentFixture<GetByIdComponent>;
+describe('CameraComponent', () => {
+  let component: CameraComponent;
+  let fixture: ComponentFixture<CameraComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GetByIdComponent ]
+      declarations: [ CameraComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GetByIdComponent);
+    fixture = TestBed.createComponent(CameraComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

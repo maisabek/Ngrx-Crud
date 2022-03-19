@@ -4,18 +4,18 @@ import * as getByIdActionTypes from '../actions/getById.action';
 
 export const getByIdReducer = createReducer(
   initialState,
-  on(getByIdActionTypes.loadBookRequestAction, (state, {id}) => ({
+  on(getByIdActionTypes.loadUserRequestAction, (state, {id}) => ({
     ...state,
     isLoading: true
   })),
 
-  on(getByIdActionTypes.loadBookSuccessAction, (state, { book }) => ({
+  on(getByIdActionTypes.loadUserSuccessAction, (state, { user }) => ({
       ...state,
       isLoading: false,
-      selectedBook: book
+      // selectedUser: user
   })),
 
-  on(getByIdActionTypes.loadBookFailureAction, (state, { error }) => ({
+  on(getByIdActionTypes.loadUserFailureAction, (state, { error }) => ({
     ...state,
     isLoading: false,
     error: error

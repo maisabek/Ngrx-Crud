@@ -14,8 +14,7 @@ constructor(private http:HttpClient,private actions:Actions,private _ServiceServ
 saveRequestEffect$ = createEffect(() => this.actions.pipe(
   ofType(saveActions.saveRequestAction),
     switchMap(action => {
-      const subject = "Book";
-      return this._ServiceService.saveData(action.item).pipe(
+      return this._ServiceService.saveData(action).pipe(
         map((item: any) => {
             return saveActions.saveSuccessAction({ item })
         }),

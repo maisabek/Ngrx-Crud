@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import {Store} from '@ngrx/store';
+import { PagesService } from 'src/app/services/pages.service';
 import { saveRequestAction } from 'src/app/store/actions/insert.action';
 @Component({
   selector: 'app-insert',
@@ -9,21 +10,37 @@ import { saveRequestAction } from 'src/app/store/actions/insert.action';
 })
 export class InsertComponent implements OnInit {
   buildForm:FormGroup;
-  constructor(private store:Store<any>,private fb:FormBuilder) {
+  isLoading:any=true;
+  constructor(private store:Store<any>,private fb:FormBuilder,public _service:PagesService) {
     store.subscribe((res)=>{
-      console.log("res = ",res)
+      this.isLoading=res.save.isLoading
     })
     this.buildForm=this.fb.group({
-      name:'',
+      name:[''],
+      phone:'',
       email:'',
-      password:''
+      password:'',
+      country:'',
+      national_number:'',
+      birthday:'',
+      canEdit:'',
+      canView:''
     })
   }
 
   ngOnInit(): void {
+
   }
   Insert(){
    this.store.dispatch(saveRequestAction(this.buildForm.value))
+   this.buildForm.reset();
+   // initial بالقيمة ال value ال update تانى و validator عشان يرجع ال
+   this.buildForm.updateValueAndValidity();
+  //  if(this.isLoading == false){
+  //   // this._service.selectedItem(0);
+  //  }
   }
-
+  reloadCurrentPage(){
+    window.location.reload()
+  }
 }
