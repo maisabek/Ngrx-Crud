@@ -21,7 +21,7 @@
         </div>
         <div class="col-11 content_container" [ngClass]="newWidth">
             <div class="row">
-                <div class="col-12 nav_container" [ngClass]="navWidth">
+                <div class="col-12 nav_container" [style.width]="navWidth">
                     <div class="float-end">
                         <a routerLink="/list">
                             <img src="assets/img/Logo_07.png " class="logo_img_0 h-100 ">
@@ -31,7 +31,7 @@
 
                         <li>
                             <a class="camera-btn " routerLink="/camera" routerLinkActive="LinkActive ">
-                                <i class="fa fa-camera mt-2" aria-hidden="true "></i>
+                                <i class="fa fa-camera" aria-hidden="true "></i>
                             </a>
                         </li>
                         <!-- <li class="mx-4 ">

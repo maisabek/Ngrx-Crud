@@ -6,43 +6,44 @@
                                                         border-radius: 50%;
                                                         width: 15%;
                                                     }
-
+                                                    
                                                     .text-dark-blue {
                                                         color: $dark_blue;
                                                         font-size: 28px;
+                                                        font-family: cursive;
                                                     }
-
+                                                    
                                                     .search-input {
                                                         border-radius: 20px;
                                                     }
-
+                                                    
                                                     .btn-light-danger {
                                                         background-color: rgb(245, 187, 187);
                                                         color: $dark_red;
                                                     }
-
+                                                    
                                                     .btn-light-update {
                                                         background-color: rgb(170, 194, 233);
                                                         color: $dark_blue;
                                                     }
-
+                                                    
                                                     th {
                                                         color: $dark_blue;
                                                     }
-
+                                                    
                                                     .fa-spinner {
                                                         margin: 0px 45%;
                                                     }
-
+                                                    
                                                     .table-responsive {
                                                         overflow: hidden;
                                                     }
-
+                                                    
                                                     .btn-sort {
                                                         background: $dark_blue;
                                                         border-radius: 10px;
                                                     }
-
+                                                    
                                                     .sortBy {
                                                         background: transparent;
                                                         border: none;
@@ -52,13 +53,17 @@
                                                             color: $dark_blue;
                                                         }
                                                     }
-
+                                                    
+                                                    tr {
+                                                        font-family: monospace;
+                                                    }
+                                                    
                                                     @media(max-width: 767px) {
                                                         .show_all_btn {
                                                             width: 55%;
                                                         }
                                                         .btn-light-update {
-                                                            margin: 0px 8% 0px 0px;
+                                                            margin: 0px 3% 0px 0px;
                                                         }
                                                         .birthday,
                                                         .phone {

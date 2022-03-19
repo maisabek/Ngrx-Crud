@@ -23,18 +23,18 @@ export class SidebarComponent implements OnInit {
   }
   isOpen:any=false
   newWidth:any="col-md-11"
-  navWidth:any="col-md-12"
+  navWidth:any="96%"
   ToggleSide(){
   this.isOpen=!this.isOpen;
   if(this.isOpen == true){
     this.newWidth="col-md-9";
     this._service.tableWidth="86%"
-    this.navWidth="col-md-10"
+    this.navWidth="81%"
 
   }else{
     this.newWidth="col-md-11";
     this._service.tableWidth="100%"
-    this.navWidth="col-md-12"
+    this.navWidth="96%"
 
 
   }
