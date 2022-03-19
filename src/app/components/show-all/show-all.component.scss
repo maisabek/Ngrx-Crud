@@ -10,7 +10,7 @@
                                                     .text-dark-blue {
                                                         color: $dark_blue;
                                                         font-size: 28px;
-                                                        font-family: cursive;
+                                                        font-family: monospace;
                                                     }
                                                     
                                                     .search-input {
@@ -75,5 +75,9 @@
                                                         .search_container {
                                                             width: 75% !important;
                                                             margin: 0px 2%;
+                                                        }
+                                                        .search-input {
+                                                            border-radius: 8px;
+                                                            padding: 5px;
                                                         }
                                                     }
