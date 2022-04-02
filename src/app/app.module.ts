@@ -16,26 +16,31 @@ import { DeleteEffect } from './store/effects/delete.effect';
 import { UpdateEffect } from './store/effects/update.effect';
 import { getByIdReducer } from './store/reducers/getById.reducer';
 import { GetByIdEffects } from './store/effects/getById.effect';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { InsertModule } from './components/insert/insert/insert.module';
-import { ListModule } from './components/show-all/list/list.module';
+// import { SidebarComponent } from './sidebar/sidebar.component';
 import { UpdateModule } from './components/update/update/update.module';
 import { CameraComponent } from './components/camera/camera.component';
 import { WebcamModule } from 'ngx-webcam';
+import { HomeComponent } from './components/home/home.component';
+import { SidebarModule } from './sidebar/sidebar/sidebar.module';
+import { NavbarComponent } from './components/layout/navbar/navbar.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    CameraComponent
+    // SidebarComponent,
+    CameraComponent,
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    InsertModule,
-    ListModule,
+    SidebarModule,
     UpdateModule,
     WebcamModule,
     StoreModule.forRoot({show:showReducer,save:saveReducer,

@@ -9,7 +9,7 @@ import { UpdateComponent } from '../components/update/update.component';
   providedIn: 'root'
 })
 export class PagesService {
-  tableWidth:any="w-100"
+  tableWidth:any="100%"
 allPages:any=[
   {id:0,title:"User List",page:ShowAllComponent,class:"active",url:"list"},
   {id:1,title:"Add User",page:InsertComponent,class:"active",url:"add"},

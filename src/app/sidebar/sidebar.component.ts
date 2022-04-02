@@ -11,20 +11,17 @@ declare var $:any
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(public _service:PagesService,private service:ServiceService) {
-   }
+  constructor(public _service:PagesService) {}
 
-  ngOnInit(): void {
-   
-  }
+  ngOnInit(): void {}
   ngAfterViewInit(){
     document.getElementById("side_btn_0")?.classList.add(this._service.allPages[0].class)
-    
   }
+
   isOpen:any=false
   newWidth:any="col-md-11"
   navWidth:any="96%"
-  ToggleSide(){
+ToggleSide(){
   this.isOpen=!this.isOpen;
   if(this.isOpen == true){
     this.newWidth="col-md-9";
@@ -35,11 +32,7 @@ export class SidebarComponent implements OnInit {
     this.newWidth="col-md-11";
     this._service.tableWidth="100%"
     this.navWidth="96%"
-
-
   }
-  }
-
-
+}
 
 }

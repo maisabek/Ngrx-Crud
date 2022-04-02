@@ -43,7 +43,6 @@ export class ShowAllComponent implements OnInit {
     }
   load(){
     this._store.dispatch(loadRequestAction())
-    // this.isLoading=false;
   }
 
   delete(id:any){
@@ -59,7 +58,6 @@ export class ShowAllComponent implements OnInit {
       )
   }
   sort(event:any){
-    console.log(typeof(this.allData),"this.allData = ",this.allData)
    switch(event.target.value){
      case 'Title[A-Z]':{
        this.filterdUser=this.filterdUser.sort(

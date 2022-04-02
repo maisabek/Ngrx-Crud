@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ServiceService {
 
-  private apiUrl= environment.apiUrl;
+  public apiUrl= environment.apiUrl;
   IsLoading:any=true;
   constructor(private http:HttpClient) { }
   getData(){
@@ -26,8 +26,7 @@ export class ServiceService {
     return this.http.delete<any>(`${this.apiUrl}/users/${id}`);
   }
 
-  getById(id: number){
-    console.log("id = ",id)
+  getById(id: any){
     return this.http.get(`${this.apiUrl}/users/${id}`);
   }
 

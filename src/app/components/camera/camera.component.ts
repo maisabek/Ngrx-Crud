@@ -11,7 +11,6 @@ export class CameraComponent implements OnInit {
   @Output() getPicture = new EventEmitter<WebcamImage>();
   showWebcam = true;
   isCameraExist = true;
-
   errors: WebcamInitError[] = [];
 
   // webcam snapshot trigger
@@ -19,7 +18,6 @@ export class CameraComponent implements OnInit {
   private nextWebcam: Subject<boolean | string> = new Subject<boolean | string>();
 
   constructor() { }
-
 
   ngOnInit(): void {
     WebcamUtil.getAvailableVideoInputs()

@@ -1,0 +1,34 @@
+@import '../../../shared/varaiables';
+.chat-icon {
+    position: relative;
+    .fa-comment-o {
+        position: fixed;
+        bottom: 21px;
+        right: 31px;
+        background: $dark_blue;
+        padding: 10px 12px;
+        border-radius: 50%;
+        z-index: 222;
+        width: 51px;
+        height: 51px;
+        box-shadow: 5px 5px 10px $dark_blue;
+        &::before {
+            line-height: 31px;
+            margin: 0px 21%;
+        }
+    }
+}
+
+.footer {
+    // background: $dark_blue;
+    font-family: unset;
+    ul {
+        li {
+            border: 1px solid white;
+            padding: 5px 9px;
+            margin: 0 2%;
+            border-radius: 5px;
+            line-height: 10px;
+        }
+    }
+}

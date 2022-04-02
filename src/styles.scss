@@ -1,5 +1,11 @@
     /* You can add global styles to this file, and also import other style files */
-    
+
+    body {
+        background: url(../src/assets/img/slider-bg.jpg) fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     @media(max-width: 767px) {
         .close {
             display: none;

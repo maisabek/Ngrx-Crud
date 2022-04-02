@@ -1,18 +1,30 @@
 <section class="sidebar">
+    <!-- <div class="container"> -->
     <div class="d-flex w-100">
         <div class="side_container col-12 col-md-2" *ngIf="isOpen">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-5">
-                        <img src="assets/img/Logo_07.png" class="logo_img h-100">
+                        <!-- <a routerLink="/home">
+                            <img src="assets/img/Logo_07.png " class="logo_img_0 h-100 ">
+                        </a> -->
                     </div>
-                    <ng-container *ngFor="let item of _service.allPages.slice(0,2)">
-                        <div class="col-md-12">
-                            <button class="mt-4 btn text-white text-center side-header" id="side_btn_{{item.id}}" (click)="_service.selectedItem(item.id)" routerLink="{{item.url}}">
-                {{item.title}}
-              </button>
-                        </div>
-                    </ng-container>
+                    <!-- <ng-container *ngFor="let item of _service.allPages.slice(0,2)"> -->
+                    <div class="col-md-12 mt-5">
+                        <a [routerLink]="[{outlets: {sidebar: ''}}]">
+                            <button class="mt-4 btn text-white text-center side-header">
+                          User List
+                        </button>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <a [routerLink]="[{ outlets : { sidebar: ['adduser'] }}]">
+                            <button class="mt-4 btn text-white text-center side-header">
+                          Add User
+                      </button>
+                        </a>
+                    </div>
+                    <!-- </ng-container> -->
                 </div>
             </div>
         </div>
@@ -23,7 +35,7 @@
             <div class="row">
                 <div class="col-12 nav_container" [style.width]="navWidth">
                     <div class="float-end">
-                        <a routerLink="/list">
+                        <a routerLink="/home">
                             <img src="assets/img/Logo_07.png " class="logo_img_0 h-100 ">
                         </a>
                     </div>
@@ -34,18 +46,17 @@
                                 <i class="fa fa-camera" aria-hidden="true "></i>
                             </a>
                         </li>
-                        <!-- <li class="mx-4 ">
-                            <a routerLink="/add " routerLinkActive="LinkActive ">Add user</a>
 
-                        </li> -->
                     </ul>
                 </div>
             </div>
             <div class="container ">
 
-                <router-outlet></router-outlet>
+                <router-outlet name="sidebar"></router-outlet>
                 <!-- <ng-container *ngComponentOutlet="_service.selectedPage "></ng-container> -->
             </div>
         </div>
     </div>
+    <!-- <
+/div> -->
 </section>

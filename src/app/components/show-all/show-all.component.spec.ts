@@ -9,8 +9,7 @@ describe('ShowAllComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ShowAllComponent ]
-    })
-    .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,8 @@ describe('ShowAllComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  // it('sort function should return sorted items', () => {
+  // //  let event:any
+  // //  expect(component.sort(event)).toEqual(component.filterdUser)
+  // });
 });

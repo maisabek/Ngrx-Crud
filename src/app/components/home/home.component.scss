@@ -1,0 +1,50 @@
+@import '../../shared/varaiables';
+#header {
+    // background: url(../../../assets/img/slider-bg.jpg) fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 740px;
+    position: relative;
+    #overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        // background: rgba(4, 36, 58, 0.5);
+        #content {
+            margin: 10% 5%;
+            width: 80%;
+            h5 {
+                font-family: cursive;
+                font-size: 30px;
+                color: $dark_blue;
+            }
+            p {
+                color: $dark_blue;
+                font-size: 20px;
+                font-family: sans-serif;
+            }
+        }
+    }
+    &::before {
+        background: url(../../../assets/img/04.png);
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        content: "";
+        z-index: 20;
+        bottom: 0;
+    }
+}
+
+.btn-crud {
+    background-color: rgb(170, 194, 233);
+    color: $dark_blue;
+    padding: 5px 7px;
+    // border-radius: 50%;
+    width: 15%;
+    a {
+        text-decoration: none;
+    }
+}
