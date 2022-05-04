@@ -1,36 +1,54 @@
-    @import '../../../shared/varaiables';
-    .nav_container {
-        background-color: #fff !important;
-        margin: 37px;
-        height: 56px;
-        border-radius: 28px;
-        box-shadow: 0 11px 37px 0 rgb(28 188 243 / 11%);
-    }
+                @import '../../../shared/varaiables';
+                .nav_container {
+                    background-color: #fff !important;
+                    margin: 37px;
+                    height: 56px;
+                    border-radius: 28px;
+                    box-shadow: 0 11px 37px 0 rgb(28 188 243 / 11%);
+                }
 
-    .fa-camera {
-        margin-top: 45%;
-    }
+                .fa-camera {
+                    margin-top: 45%;
+                }
 
-    a {
-        text-decoration: none;
-        font-size: 20px;
-        color: $dark_blue;
-    }
+                a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: $dark_blue;
+                }
 
-    .logo_img_0 {
-        margin: 3px 3% 0px;
-        width: 76px;
-    }
+                .logo_img_0 {
+                    margin: 3px 3% 0px;
+                    width: 76px;
+                }
 
-    .clearfix {
-        clear: both;
-    }
+                .clearfix {
+                    clear: both;
+                }
 
-    select {
-        border: none;
-        outline: none;
-        color: $dark_blue;
-        option {
-            color: $dark_blue;
-        }
-    }
+                select {
+                    border: none;
+                    outline: none;
+                    color: $dark_blue;
+                    option {
+                        color: $dark_blue;
+                    }
+                }
+
+                .dropdown-toggle {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                @media (max-width:767px) {
+                    .camera,
+                    .side {
+                        display: none;
+                    }
+                    .mobile-dropdown {
+                        display: block !important;
+                    }
+                    .dropdown-toggle::after {
+                        display: none;
+                    }
+                }

@@ -11,14 +11,16 @@
                     </div>
                     <!-- <ng-container *ngFor="let item of _service.allPages.slice(0,2)"> -->
                     <div class="col-md-12 mt-5">
-                        <a [routerLink]="[{outlets: {sidebar: ['']}}]" [skipLocationChange]="true">
+                        <!-- [{outlets: {sidebar: ['']}}] -->
+                        <a [routerLink]="['', {outlets:{sidebar:['']}}]" [skipLocationChange]="true">
                             <button class="mt-4 btn text-white text-center side-header">
                           {{'users.UsersList'| translate}}
                         </button>
                         </a>
                     </div>
                     <div class="col-md-12">
-                        <a [routerLink]="[{ outlets : {sidebar: ['adduser'] }}]" [skipLocationChange]="true">
+                        <!-- [{ outlets : {sidebar: ['adduser'] }}] -->
+                        <a [routerLink]="['', {outlets:{sidebar:['adduser']}}]" [skipLocationChange]="true">
                             <button class="mt-4 btn text-white text-center side-header">
                               {{'users.addUser'| translate}}
                       </button>

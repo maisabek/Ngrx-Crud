@@ -1,13 +1,7 @@
 @import '../../shared/varaiables';
 #header {
-    min-height: 542px;
     position: relative;
     #overlay {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
         // background: rgba(4, 36, 58, 0.5);
         #content {
             margin: 10% 5%;
@@ -49,6 +43,7 @@
 .section-how-it-works {
     position: relative;
     counter-reset: number;
+    margin: 4% 0px;
     h3 {
         color: $dark_blue;
     }
@@ -111,9 +106,9 @@
                 }
             }
             &:nth-child(2) {
-                background-color: #379df1;
+                background-color: $dark_red;
                 &:after {
-                    background-color: #379df1;
+                    background-color: $dark_red;
                 }
             }
             &:nth-child(3) {
@@ -123,15 +118,15 @@
                 }
             }
             &:nth-child(4) {
-                background-color: #379df1;
+                background-color: $dark_red;
                 &:after {
-                    background-color: #379df1;
+                    background-color: $dark_red;
                 }
             }
         }
     }
     p {
-        color: gray;
+        color: $dark_blue;
         font-size: 16px;
         margin: -12px -46px;
         text-align: right;
@@ -143,4 +138,10 @@
 
 .clearfix {
     clear: both;
+}
+
+@media(max-width:767px) {
+    .btn-crud {
+        width: 40% !important;
+    }
 }
