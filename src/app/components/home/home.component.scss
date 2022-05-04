@@ -1,6 +1,6 @@
 @import '../../shared/varaiables';
 #header {
-    min-height: 519px;
+    min-height: 542px;
     position: relative;
     #overlay {
         position: absolute;
@@ -49,7 +49,7 @@
 .section-how-it-works {
     position: relative;
     counter-reset: number;
-    h1 {
+    h3 {
         color: $dark_blue;
     }
     .steps-container {
