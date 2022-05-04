@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  currentLang:string
+  constructor(public translate:TranslateService) {
+    this.currentLang=localStorage.getItem('currentLanguage') || 'en'
+    this.translate.use(this.currentLang)
+  }
 
   ngOnInit(): void {
   }

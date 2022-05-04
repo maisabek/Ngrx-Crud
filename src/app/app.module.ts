@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import {StoreModule} from '@ngrx/store';
 import { saveReducer } from './store/reducers/insert.reducer';
 import { showReducer } from './store/reducers/showAll.reducer';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EffectsModule } from '@ngrx/effects';
 import { showAllEffect } from './store/effects/showAll.effect';
 import { InsertEffect } from './store/effects/insert.effect';
@@ -24,8 +24,12 @@ import { HomeComponent } from './components/home/home.component';
 import { SidebarModule } from './sidebar/sidebar/sidebar.module';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
+import {TranslateModule,TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
-
+export function HttpLoaderFactory(http:HttpClient){
+  return new TranslateHttpLoader(http,'./assets/i18n/','.json')
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +47,14 @@ import { FooterComponent } from './components/layout/footer/footer.component';
     SidebarModule,
     UpdateModule,
     WebcamModule,
+    TranslateModule.forRoot({
+      defaultLanguage:'en',
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttpLoaderFactory,
+        deps:[HttpClient]
+      }
+    }),
     StoreModule.forRoot({show:showReducer,save:saveReducer,
                          update:updateReducer,delete:deleteReducer,
                          getById:getByIdReducer}),

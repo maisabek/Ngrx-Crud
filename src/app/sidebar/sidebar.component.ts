@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { InsertComponent } from '../components/insert/insert.component';
 import { ShowAllComponent } from '../components/show-all/show-all.component';
 import { PagesService } from '../services/pages.service';
@@ -11,7 +12,11 @@ declare var $:any
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(public _service:PagesService) {}
+  constructor(public _service:PagesService,public translate:TranslateService) {
+    this.currentLang=localStorage.getItem('currentLanguage') || 'en'
+    this.translate.use(this.currentLang)
+  }
+
 
   ngOnInit(): void {}
   ngAfterViewInit(){
@@ -34,5 +39,14 @@ ToggleSide(){
     this.navWidth="96%"
   }
 }
+  currentLang:string
+
+  changeCurrentLang(event:any){
+    let selectedLanguage=event.target.value;
+    console.log("selectedLanguage = ",selectedLanguage)
+    this.translate.use(selectedLanguage)
+    localStorage.setItem("currentLanguage",selectedLanguage)
+    window.location.reload()
+  }
 
 }

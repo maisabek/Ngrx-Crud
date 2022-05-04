@@ -84,6 +84,15 @@ ul {
     }
 }
 
+select {
+    border: none;
+    outline: none;
+    color: $dark_blue;
+    option {
+        color: $dark_blue;
+    }
+}
+
 .LinkActive {
     background-color: rgb(170, 194, 233);
     color: $dark_blue;

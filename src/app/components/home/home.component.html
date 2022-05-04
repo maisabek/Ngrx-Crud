@@ -4,20 +4,79 @@
     <div id="overlay">
         <div class="container">
             <!-- <app-navbar></app-navbar> -->
-            <div class="row">
+            <div class="row" dir="{{'dir'|translate}}">
                 <div class="col-md-8 mt-5">
                     <div id="content">
-                        <h5 class="wow flash h3 mt-5" data-wow-delay="1s" data-wow-duration="5s">Our Project</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius tempor augue et semper</p>
+                        <h5 class="wow flash h3 mt-5" data-wow-delay="1s" data-wow-duration="5s">{{'home.education'|translate}}</h5>
+                        <p>
+                            {{'home.this-site-is-for-using-the-ngrx-crud-and-unit-testing'|translate}}
+                        </p>
                         <button class="btn btn-crud border border-white text-white mt-1 w-25">
-                <a routerLink="/side">Crud Operation</a>
+                <a routerLink="/side">{{'home.users'| translate}}</a>
               </button>
                     </div>
                 </div>
 
                 <div class="col-md-4 mt-3">
-                    <img src="assets/img/03.png" class="w-100 h-100" alt="">
+                    <img src="assets/img/06.png" class="w-100 h-100" alt="">
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-100 section-how-it-works">
+        <div class="container">
+
+            <div class="col-12 col-md-12 py-5 mx-auto ">
+                <div class="text-center d-flex justify-content-center mb-4">
+                    <h1 class="text-center title-styled-1">
+                        {{'home.site-content' | translate}}
+                    </h1>
+                </div>
+
+                <div class="row d-flex no-gutters steps-container">
+                    <div class="col-12 col-md-3 step">
+                        Ngrx Crud Operation
+                    </div>
+                    <div class="col-12 col-md-3 step">
+                        Unit Testing
+                    </div>
+                    <div class="col-12 col-md-3 step">
+                        Lazy Loading
+                    </div>
+                    <div class="col-12 col-md-3 step">
+                        Multi Language & Camera
+                    </div>
+                </div>
+
+                <div class="row d-flex no-gutters">
+                    <div class="col-12 col-md-3 ">
+                        <p>
+                            Ngrx Crud Operation practise
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-3 ">
+
+                        <p>
+                            Unit Testing Practise
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-3 ">
+
+                        <p>
+                            Lazy Loading Practise
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-3 ">
+
+                        <p>
+                            Multi Language & Camera Practise
+                        </p>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>

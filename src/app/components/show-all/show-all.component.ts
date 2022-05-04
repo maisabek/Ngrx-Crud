@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Store} from '@ngrx/store';
+import { TranslateService } from '@ngx-translate/core';
 import { PagesService } from 'src/app/services/pages.service';
 import { ServiceService } from 'src/app/services/service.service';
 import { deleteRequestAction } from 'src/app/store/actions/delete.action';
@@ -16,7 +17,8 @@ export class ShowAllComponent implements OnInit {
    filterdUser:any[]=[];
 
    LoadingDelete:any
-  constructor(private _store:Store<any>,public _service:PagesService,private service:ServiceService) {
+  constructor(private _store:Store<any>,public _service:PagesService,
+    private service:ServiceService,public translate:TranslateService) {
     _store.subscribe(res=>{
       this.allData=res.show.books;
       this.filterdUser=this.allData;
@@ -27,11 +29,21 @@ export class ShowAllComponent implements OnInit {
       }
     })
     console.log("this.userData = ",this.userData)
+    this.currentLang=localStorage.getItem('currentLanguage') || 'en'
+    this.translate.use(this.currentLang)
    }
    userData:any
    getById(id:any){
     this._store.dispatch(loadUserRequestAction({ id }))
 
+  }
+  currentLang:string
+
+  changeCurrentLang(event:any){
+    let selectedLanguage=event.target.value;
+    console.log("selectedLanguage = ",selectedLanguage)
+    this.translate.use(selectedLanguage)
+    localStorage.setItem("currentLanguage",selectedLanguage)
   }
 
    isLoading:any=true

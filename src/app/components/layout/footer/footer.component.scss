@@ -4,7 +4,6 @@
     .fa-comment-o {
         position: fixed;
         bottom: 21px;
-        right: 31px;
         background: $dark_blue;
         padding: 10px 12px;
         border-radius: 50%;
@@ -20,8 +19,11 @@
 }
 
 .footer {
-    // background: $dark_blue;
+    background-color: #fff !important;
+    box-shadow: 0 11px 37px 0 rgb(28 188 243 / 11%);
     font-family: unset;
+    color: $dark_blue !important;
+    border-top: 1px dashed;
     ul {
         li {
             border: 1px solid white;

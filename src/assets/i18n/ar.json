@@ -1,0 +1,26 @@
+{
+    "dir": "rtl",
+    "left": "left",
+    "nav": {
+        "users": "المستخدمين"
+    },
+    "home": {
+        "education": "تعليم",
+        "this-site-is-for-using-the-ngrx-crud-and-unit-testing": "هذا الموقع لأستخدام ال ngrx crud وال  unitTesting وال  LazyLoading والكاميرا و اكتر من لغة. فى الكود لتعلم",
+        "users": "المستخدمين",
+        "site-content": "محتوى الموقع"
+
+    },
+    "users": {
+        "UsersList": "قائمة المستخدمين",
+        "Name": "الأسم",
+        "Phone": "الرقم",
+        "Email": "البريد",
+        "country": "الدولة",
+        "birthday": "تاريخ الميلاد",
+        "Actions": "العمليات",
+        "update": "تعديل",
+        "delete": "حذف",
+        "addUser": "اضافة مستخدم"
+    }
+}

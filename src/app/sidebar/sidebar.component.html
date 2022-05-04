@@ -1,4 +1,4 @@
-<section class="sidebar">
+<section class="sidebar" dir="{{'dir'|translate}}">
     <!-- <div class="container"> -->
     <div class="d-flex w-100">
         <div class="side_container col-12 col-md-2" *ngIf="isOpen">
@@ -11,16 +11,16 @@
                     </div>
                     <!-- <ng-container *ngFor="let item of _service.allPages.slice(0,2)"> -->
                     <div class="col-md-12 mt-5">
-                        <a [routerLink]="[{outlets: {sidebar: ''}}]">
+                        <a [routerLink]="[{outlets: {sidebar: ['']}}]" [skipLocationChange]="true">
                             <button class="mt-4 btn text-white text-center side-header">
-                          User List
+                          {{'users.UsersList'| translate}}
                         </button>
                         </a>
                     </div>
                     <div class="col-md-12">
-                        <a [routerLink]="[{ outlets : { sidebar: ['adduser'] }}]">
+                        <a [routerLink]="[{ outlets : {sidebar: ['adduser'] }}]" [skipLocationChange]="true">
                             <button class="mt-4 btn text-white text-center side-header">
-                          Add User
+                              {{'users.addUser'| translate}}
                       </button>
                         </a>
                     </div>
@@ -41,22 +41,24 @@
                     </div>
                     <ul class="d-flex list-unstyled mt-2 mx-4 float-start ">
 
-                        <li>
-                            <a class="camera-btn " routerLink="/camera" routerLinkActive="LinkActive ">
-                                <i class="fa fa-camera" aria-hidden="true "></i>
-                            </a>
+
+                        <li class="mt-2">
+                            <select name="" id="" (change)="changeCurrentLang($event)">
+                              <option selected>{{currentLang}}</option>
+                              <option value="en" *ngIf="currentLang != 'en'">en</option>
+                              <option value="ar" *ngIf="currentLang != 'ar'">ar</option>
+                            </select>
                         </li>
+
 
                     </ul>
                 </div>
             </div>
             <div class="container ">
-
-                <router-outlet name="sidebar"></router-outlet>
-                <!-- <ng-container *ngComponentOutlet="_service.selectedPage "></ng-container> -->
+                <!-- <router-outlet name="sidebar"></router-outlet> -->
+                <ng-container *ngComponentOutlet="_service.selectedPage "></ng-container>
             </div>
         </div>
     </div>
-    <!-- <
-/div> -->
+    <!-- </div> -->
 </section>
