@@ -2,7 +2,6 @@
 #header {
     position: relative;
     #overlay {
-        // background: rgba(4, 36, 58, 0.5);
         #content {
             margin: 10% 5%;
             width: 80%;
@@ -18,22 +17,12 @@
             }
         }
     }
-    // &::before {
-    //     background: url(../../../assets/img/04.png);
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 300px;
-    //     content: "";
-    //     z-index: 20;
-    //     bottom: 0;
-    // }
 }
 
 .btn-crud {
     background-color: rgb(170, 194, 233);
     color: $dark_blue;
     padding: 5px 7px;
-    // border-radius: 50%;
     width: 15%;
     a {
         text-decoration: none;
@@ -106,9 +95,9 @@
                 }
             }
             &:nth-child(2) {
-                background-color: $dark_red;
+                background-color: rgb(9, 46, 104);
                 &:after {
-                    background-color: $dark_red;
+                    background-color: rgb(9, 46, 104);
                 }
             }
             &:nth-child(3) {
@@ -118,9 +107,9 @@
                 }
             }
             &:nth-child(4) {
-                background-color: $dark_red;
+                background-color: rgb(9, 46, 104);
                 &:after {
-                    background-color: $dark_red;
+                    background-color: rgb(9, 46, 104);
                 }
             }
         }
@@ -140,8 +129,36 @@
     clear: both;
 }
 
+.section-talking-numbers {
+    color: $dark_blue;
+    .card {
+        box-shadow: 1px 1px 12px gainsboro;
+        border: none;
+        position: relative;
+        .number {
+            font-size: 30px;
+            font-weight: bold;
+            color: $dark_blue;
+            position: absolute;
+            top: 30px;
+            right: 44px
+        }
+        .title {
+            font-size: 20px;
+            color: #15345d;
+            position: absolute;
+            top: 73px;
+            right: 6px;
+            width: 37%;
+        }
+    }
+}
+
 @media(max-width:767px) {
     .btn-crud {
         width: 40% !important;
+    }
+    .section-how-it-works p {
+        margin: 0px
     }
 }

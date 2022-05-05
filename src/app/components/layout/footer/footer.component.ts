@@ -14,11 +14,9 @@ export class FooterComponent implements OnInit {
     this.translate.use(this.currentLang)
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   changeCurrentLang(event:any){
     let selectedLanguage=event.target.value;
-    console.log("selectedLanguage = ",selectedLanguage)
     this.translate.use(selectedLanguage)
     localStorage.setItem("currentLanguage",selectedLanguage)
     window.location.reload()

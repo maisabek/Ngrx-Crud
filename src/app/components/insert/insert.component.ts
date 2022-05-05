@@ -11,7 +11,8 @@ import { saveRequestAction } from 'src/app/store/actions/insert.action';
 export class InsertComponent implements OnInit {
   buildForm:FormGroup;
   isLoading:any=true;
-  constructor(private store:Store<any>,private fb:FormBuilder,public _service:PagesService) {
+  constructor(private store:Store<any>,private fb:FormBuilder,
+              public _service:PagesService) {
     store.subscribe((res)=>{
       this.isLoading=res.save.isLoading
     })
@@ -36,9 +37,6 @@ export class InsertComponent implements OnInit {
    this.buildForm.reset();
    // initial بالقيمة ال value ال update تانى و validator عشان يرجع ال
    this.buildForm.updateValueAndValidity();
-  //  if(this.isLoading == false){
-  //   // this._service.selectedItem(0);
-  //  }
   }
   reloadCurrentPage(){
     window.location.reload()
